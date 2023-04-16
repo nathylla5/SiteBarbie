@@ -1,24 +1,91 @@
 * {
-    margin: 0px; 
-    padding: 0px;
+  margin: 0px; 
+  padding: 0px;
 }
 body {
-    overflow: hidden;
-    background-color: #D84894;
-    background-size: cover;
-    text-align: center;
-  }
+  overflow: hidden;
+  background-color: #D84894;
+  background-size: cover;
+  text-align: center;
+}
 
-header div {
-    background-color: #EF87BE;
-    height: 200px;
-  }
+header{
+  background-color: #EF87BE;
+  height: 200px;
+}
 
-  #canvas button {
-    background-color: transparent;
-    border: none;
-  }
+#logoBarbie {
+  max-width: 350px;
+}
 
-  #logoBarbie {
-    max-width: 350px;
-  }
+/*----------------------------------------------------------------*/
+
+.flut button{
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #EF87BE;
+  border: none;
+  box-shadow: 0 1px 5px rgba(0,0,0,.4);
+  font-size: 24px;
+  color: white;
+  display: inline-block;
+  align-items: horizontal;
+    
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.flut button.barbie{
+  position: absolute;
+  margin-left: -150px;
+  background-color: transparent;
+  z-index: 20;
+  box-shadow: none;
+}
+
+.flut ul{
+  position:absolute;
+  top: 200px;
+  left: 630px;
+  list-style:none;
+  z-index:10;
+  margin: auto 20px;
+  
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.flut ul li{
+  display: inline-block;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: -10%;
+  opacity: 0;
+  margin: 10px;
+  
+  
+  -webkit-transition: .3s ease-out;
+  -moz-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.flut button.barbie:active,
+.flut button.barbie:focus{
+  outline: none;
+  background-color: transparent;
+ }
+
+.flut button.barbie:active + ul,
+.flut button.barbie:focus + ul{
+  bottom: 70px;
+}
+
+.flut button.barbie:active + ul li,
+.flut button.barbie:focus + ul li{
+  margin-bottom: 10px;
+  opacity: 1;
+}
