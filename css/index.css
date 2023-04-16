@@ -1,0 +1,24 @@
+* {
+    margin: 0px; 
+    padding: 0px;
+}
+body {
+    overflow: hidden;
+    background-color: #D84894;
+    background-size: cover;
+    text-align: center;
+  }
+
+header div {
+    background-color: #EF87BE;
+    height: 200px;
+  }
+
+  #canvas button {
+    background-color: transparent;
+    border: none;
+  }
+
+  #logoBarbie {
+    max-width: 350px;
+  }
