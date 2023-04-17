@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'sunborn-sans-one';
+  src: url('/fonts/sunborn-sans-one.otf') format('truetype');
+}
+
+
 * {
   margin: 0px; 
   padding: 0px;
@@ -5,9 +11,24 @@
 body {
   overflow: hidden;
   background-color: #D84894;
+  background-image: url(/images/barbies.png);
   background-size: cover;
   text-align: center;
 }
+
+  body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+
+  body::-webkit-scrollbar-track {
+    background: orange;        /* color of the tracking area */
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: blue;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid orange;  /* creates padding around scroll thumb */
+  }
 
 header{
   background-color: #EF87BE;
@@ -40,7 +61,7 @@ header{
 
 .flut button.barbie{
   position: absolute;
-  margin-left: -150px;
+  margin-left: -180px;
   background-color: transparent;
   z-index: 20;
   box-shadow: none;
@@ -49,7 +70,7 @@ header{
 .flut ul{
   position:absolute;
   top: 200px;
-  left: 630px;
+  left: 610px;
   list-style:none;
   z-index:10;
   margin: auto 20px;
@@ -88,4 +109,60 @@ header{
 .flut button.barbie:focus + ul li{
   margin-bottom: 10px;
   opacity: 1;
+}
+
+/*----------------------------------------------------------------*/
+ #container{
+  padding-top: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 3px solid #ED007D;
+  width: 1350px;
+}
+
+p {
+ font-family: sunborn-sans-one; 
+ color: #ffffff;
+ font-size: 21px;
+}
+
+#box {
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 10px;
+  background-color: #EF87BE;
+}
+
+.box{
+  margin: 30px;
+}
+
+.filme {
+  border: none;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: transparent;
+  bottom: 30px;
+  flex-direction: row;
+  }
+  .movie {
+    position: relative;
+    margin-left: 0;
+    margin-bottom: 20px;
+    width: 220px;
+    max-height: 300px;
+    border: 2px solid #ff72bd;
+    box-shadow: 0 0 15px #ED007D;
+  }
+
+footer{
+  padding: 10px
+}
+audio::-webkit-media-controls-panel{
+  background-color: #D84894;
 }
