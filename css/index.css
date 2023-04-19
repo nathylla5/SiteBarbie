@@ -1,22 +1,22 @@
 @font-face {
   font-family: 'sunborn-sans-one';
-  src: url('/fonts/sunborn-sans-one.otf') format('truetype');
+  src: url('../fonts/sunborn-sans-one.otf') format('truetype');
 }
-
 
 * {
   margin: 0px; 
   padding: 0px;
 }
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: #D84894;
-  background-image: url(/images/barbies.png);
+  background-image: url(../images/barbies.png);
   background-size: cover;
   text-align: center;
 }
 
   body::-webkit-scrollbar {
+    display: none ;
     width: 12px;               /* width of the entire scrollbar */
   }
 
