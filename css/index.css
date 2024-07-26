@@ -22,6 +22,8 @@ body {
     justify-content: center;
 }
 
+
+
 .container {
     padding: 30px;
     max-width: 1280px;
@@ -84,7 +86,8 @@ form .input-single .input:valid~label {
     text-align: center;
 }
 
-form button[type=submit] {
+a{
+    text-decoration: none;
     font-family: sunborn-sans-one;
     color: #ffffff;
     padding: 10px 40px;

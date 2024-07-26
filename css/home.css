@@ -10,14 +10,20 @@
 }
 
 main {
+ 
   margin: 0 auto;
   width: 90%;
 }
 
 body {
+  background-image: url(../images/barbies.png);
   background-color: #d84894;
   text-align: center;
   width: 100%;
+}
+
+.icon{
+  width: 30px;
 }
 
 body::-webkit-scrollbar {
