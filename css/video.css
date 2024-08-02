@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-color: #D84894;
+  background-image: url(../images/barbies.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+iframe {
+  width: 640px;
+  height: 480px;
+  border: 2px solid #ff72bd;
+  box-shadow: 0 0 15px #ff72bd;
+}
