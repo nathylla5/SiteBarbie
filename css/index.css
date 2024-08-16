@@ -1,172 +1,98 @@
 @font-face {
-  font-family: "sunborn-sans-one";
-  src: url("../fonts/sunborn-sans-one.otf") format("truetype");
+    font-family: 'sunborn-sans-one';
+    src: url('../fonts/sunborn-sans-one.otf') format('truetype');
 }
 
 * {
-  margin: 0px;
-  padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-  background-color: #d84894;
-  background-image: url(../images/barbies.png);
-  text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-color: #D84894;
+    background-image: url(../images/barbies.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-  body::-webkit-scrollbar {
-    display: none;
-    width: 12px;             
-  }
 
-header{
-  background-color: #EF87BE;
-  height: 200px;
+
+.container {
+    padding: 30px;
+    max-width: 1280px;
+    margin: 0% auto;
+    background-color: #ef87be;
+    border-radius: 20px;
+    width: 350px;
+    height: 450px;
 }
 
-header {
-  background-color: #ef87be;
-  height: 200px;
+img {
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
 }
 
-/*----------------------------------------------------------------*/
+.input-single {
+    font-family: sunborn-sans-one;
+    color: #d84894;
+    position: relative;
+    margin: 35px 0;
+    transition: all 0.2s;
 
-.flut button {
-  cursor: pointer;
-  width: 48px;
-  height: 48px;
-  border-radius: 30px;
-  background-color: #ef87be;
-  border: none;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
-  font-size: 24px;
-  color: white;
-  display: inline-block;
-  align-items: horizontal;
 
-  -webkit-transition: 0.2s ease-out;
-  -moz-transition: 0.2s ease-out;
-  transition: 0.2s ease-out;
 }
 
-#logoBarbie {
-  max-width: 350px;
+.input-single label {
+    font-family: sunborn-sans-one;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    cursor: text;
 }
 
-.flut button.barbie {
-  position: absolute;
-  margin-left: -180px;
-  background-color: transparent;
-  z-index: 20;
-  box-shadow: none;
+.input {
+    font-family: sunborn-sans-one;
+    background-color: #ef87be;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid pink;
+    padding: 5px;
+    font-size: 10px;
+    outline: 0;
 }
 
-.flut ul {
-  position: absolute;
-  top: 200px;
-  left: 610px;
-  list-style: none;
-  z-index: 10;
-  margin: auto 20px;
 
-  -webkit-transition: 0.2s ease-out;
-  -moz-transition: 0.2s ease-out;
-  transition: 0.2s ease-out;
+form .input-single .input:focus~label,
+form .input-single .input:valid~label {
+    transform: translateY(-20px);
+    font-size: 9px;
+    color: white;
 }
 
-.flut ul li {
-  display: inline-block;
-  justify-content: flex-start;
-  position: relative;
-  margin-bottom: -10%;
-  opacity: 0;
-  margin: 10px;
-
-  -webkit-transition: 0.3s ease-out;
-  -moz-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
+.btn {
+    padding-top: 30px;
+    width: 100%;
+    text-align: center;
 }
 
-.flut button.barbie:hover {
-}
-.flut button.barbie:active,
-.flut button.barbie:focus {
-  background-color: transparent;
-}
-
-.flut button.barbie:active + ul,
-.flut button.barbie:focus + ul {
-  bottom: 70px;
-}
-
-.flut button.barbie:active + ul li,
-.flut button.barbie:focus + ul li {
-  margin-bottom: 10px;
-  opacity: 1;
-}
-
-/*----------------------------------------------------------------*/
-#container {
-  padding-top: 90px;
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom: 3px solid #ed007d;
-  width: 1350px;
-}
-
-p {
-  font-family: sunborn-sans-one;
-  color: #ffffff;
-  font-size: 21px;
-}
-
-#box {
-  padding: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 500px;
-  height: 10px;
-  background-color: #ef87be;
-}
-
-.box {
-  margin: 0 auto;
-  width: 1350px;
-}
-
-.filme {
-  border: none;
-  padding: 10px;
-  display: inline-block;
-  margin: 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  background-color: transparent;
-  bottom: 30px;
-  flex-direction: row;
-}
-
-.filme img {
-  transition: all 0.25s linear;
-}
-
-.filme img:hover {
-  align-self: center;
-  transform: scale(1.1);
-}
-
-.movie {
-  position: relative;
-  margin-left: 0;
-  margin-bottom: 20px;
-  width: 220px;
-  max-height: 300px;
-  border: 2px solid #ff72bd;
-  box-shadow: 0 0 15px #ed007d;
-}
-
-footer {
-  padding: 10px;
-}
-audio::-webkit-media-controls-panel {
-  background-color: #d84894;
+a{
+    text-decoration: none;
+    font-family: sunborn-sans-one;
+    color: #ffffff;
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #d84894;
+    cursor: pointer;
 }

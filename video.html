@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/video.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <iframe id="meuIframe" src="" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true"
+    allowfullscreen></iframe>
+  <script>
+    const urlParam = new URLSearchParams(window.location.search).get('v');
+    const meuIframe = document.getElementById('meuIframe');
+    meuIframe.src = decodeURIComponent(urlParam);
+  </script>
+</body>
+
+</html>

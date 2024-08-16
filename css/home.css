@@ -1,0 +1,237 @@
+@font-face {
+  font-family: "sunborn-sans-one";
+  src: url("../fonts/sunborn-sans-one.otf") format("truetype");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "sunborn-sans-one";
+}
+
+main {
+ 
+  margin: 0 auto;
+  width: 90%;
+}
+
+body {
+  background-image: url(../images/barbies.png);
+  background-color: #d84894;
+  text-align: center;
+  width: 100%;
+}
+
+.icon{
+  width: 30px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  width: 12px;
+}
+
+article {
+  background-color: #EF87BE;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*----------------------------------------------------------------*/
+.flut {
+  display: flex;
+  justify-content: center;
+}
+
+.flut button,
+.flut a {
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #ef87be;
+  border: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+#logoBarbie {
+  max-width: 350px;
+}
+
+.flut img#logoBarbie {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  z-index: 20;
+  box-shadow: none;
+}
+
+.flut ul {
+  position: absolute;
+  top: 25%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.flut ul li {
+  position: relative;
+  margin-bottom: -10%;
+  opacity: 0;
+  height: 0px;
+  margin: 10px;
+
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.flut ul:hover li {
+  height: auto;
+  opacity: 1;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.flut img#logoBarbie:hover,
+.flut img#logoBarbie:focus {
+  background-color: transparent;
+}
+
+.flut img#logoBarbie:hover+ul,
+.flut img#logoBarbie:focus+ul {
+  bottom: 70px;
+}
+
+.flut img#logoBarbie:hover+ul li,
+.flut img#logoBarbie:focus+ul li {
+  height: auto;
+  margin-bottom: 10px;
+  opacity: 1;
+}
+
+/*----------------------------------------------------------------*/
+
+#container {
+  padding-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 4px solid #c91e79;
+  width: 100%;
+}
+
+p {
+  font-family: sunborn-sans-one;
+  color: white;
+  font-size: 21px;
+}
+
+div.grid {
+  max-width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4px;
+  margin-inline: auto;
+}
+
+#box {
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 10px;
+  background-color: #ef87be;
+}
+
+.box {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.filme {
+  border: none;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: transparent;
+  bottom: 30px;
+  flex-direction: row;
+}
+
+.filme img {
+  transition: all 0.25s linear;
+}
+
+.filme img:hover {
+  align-self: center;
+  transform: scale(1.1);
+}
+
+.movie {
+  position: relative;
+  margin-left: 0;
+  margin-bottom: 20px;
+  width: 220px;
+  max-height: 300px;
+  border: 2px solid #ff72bd;
+  box-shadow: 0 0 15px #ed007d;
+}
+
+@media (max-width: 1200px) {
+  main {
+    padding: 30px 20px;
+  }
+
+  div.grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 90%;
+    display: grid;
+    gap: 3px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 990px) {
+  main {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  div.grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 90%;
+    display: grid;
+    gap: 2px;
+    margin-inline: auto;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  div.grid {
+    grid-template-columns: 1fr;
+  }
+}
