@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sunborn-sans-one;
 }
 
 body {
@@ -22,18 +23,6 @@ body {
     justify-content: center;
 }
 
-
-
-.container {
-    padding: 30px;
-    max-width: 1280px;
-    margin: 0% auto;
-    background-color: #ef87be;
-    border-radius: 20px;
-    width: 350px;
-    height: 450px;
-}
-
 img {
     width: 150px;
     display: block;
@@ -43,7 +32,6 @@ img {
 }
 
 .input-single {
-    font-family: sunborn-sans-one;
     color: #d84894;
     position: relative;
     margin: 35px 0;
@@ -53,7 +41,6 @@ img {
 }
 
 .input-single label {
-    font-family: sunborn-sans-one;
     font-size: 12px;
     position: absolute;
     left: 0;
@@ -62,7 +49,6 @@ img {
 }
 
 .input {
-    font-family: sunborn-sans-one;
     background-color: #ef87be;
     width: 100%;
     border: 0;
@@ -74,7 +60,7 @@ img {
 
 
 form .input-single .input:focus~label,
-form .input-single .input:valid~label {
+form .input-single .input:not(:placeholder-shown)~label {
     transform: translateY(-20px);
     font-size: 9px;
     color: white;
@@ -86,13 +72,67 @@ form .input-single .input:valid~label {
     text-align: center;
 }
 
-a{
+form button {
     text-decoration: none;
-    font-family: sunborn-sans-one;
     color: #ffffff;
     padding: 10px 40px;
     border: 0;
     border-radius: 10px;
     background-color: #d84894;
     cursor: pointer;
+}
+
+
+#cadastroContainer {
+    padding: 30px;
+    max-width: 1280px;
+    margin: 0% auto;
+    background-color: #ef87be;
+    border-radius: 20px;
+    width: 350px;
+    height: 450px;
+}
+
+#loginContainer {
+    padding: 30px;
+    max-width: 1280px;
+    margin: 0% auto;
+    background-color: #ef87be;
+    border-radius: 20px;
+    width: 350px;
+    height: 450px;
+}
+
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+#loginContainer p {
+    margin-top: 48px;
+    margin-right: 10px;
+    font-size: 10px;
+    text-align: end;
+    color: #D84894;
+}
+
+#loginContainer p button,
+#cadastroContainer p button {
+    margin-left: 4px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+}
+
+#cadastroContainer p {
+    margin-top: 48px;
+    margin-right: 10px;
+    font-size: 10px;
+    text-align: end;
+    color: #D84894;
 }
