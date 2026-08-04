@@ -199,7 +199,7 @@ div.grid {
   box-shadow: 0 0 15px #ed007d;
 }
 
-@media (max-width: 1200px) {
+
   main {
     padding: 30px 20px;
   }
@@ -211,7 +211,7 @@ div.grid {
     gap: 3px;
     margin-inline: auto;
   }
-}
+
 
 @media (max-width: 990px) {
   main {

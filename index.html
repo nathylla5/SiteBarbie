@@ -4,33 +4,55 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="images/logoBabi.png">
 	<link rel="stylesheet" href="css/index.css">
 	<title>Barbie's Site</title>
 </head>
 
 <body>
-	<section class="container">
-		<div>
-			<h1 hidden>Barbie</h1>
-			<img src="images/logoBarbie.png" alt="">
-			<form action="index.html">
-				<div class="input-single">
-					<input type="text" name="usuario" id="nome-box" class="input" required>
-					<label for="nome-box">usuário</label>
-				</div>
 
-				<div class="input-single">
-					<input type="text" name="senha" id="senha-box" class="input" required>
-					<label for="senha-box">senha</label>
-				</div>
-				<div class="btn">
-					<a href="home.html" type="submit">Entrar</a>
-				</div>
-			</form>
-		</div>
-	</section>
+	<div id="loginContainer" class="form-container active">
+		<h1 hidden>Barbie</h1>
+		<img src="images/logoBarbie.png" alt="">
+		<form id="loginForm">
+			<div class="input-single">
+				<input type="email" name="email" id="email" class="input" placeholder=" " required>
+				<label for="nome-login">email</label>
+			</div>
+
+			<div class="input-single">
+				<input type="password" name="senha" id="senha" class="input" placeholder=" " required>
+				<label for="senha-login">senha</label>
+			</div>
+			<div class="btn">
+				<button type="submit">Entrar</button>
+			</div>
+		</form>
+		<p>Não tem uma conta? <button id="showCadastro">Cadastre-se</button></p>
+	</div>
+
+	<div id="cadastroContainer" class="form-container">
+		<h1 hidden>Barbie</h1>
+		<img src="images/logoBarbie.png" alt="">
+		<form id="cadastroForm">
+			<div class="input-single">
+				<input type="email" name="cadastroEmail" id="cadastroEmail" class="input" placeholder=" " required>
+				<label for="nome-cadastro">email</label>
+			</div>
+
+			<div class="input-single">
+				<input type="password" name="cadastroSenha" id="cadastroSenha" class="input" placeholder=" " required>
+				<label for="senha-cadastro">senha</label>
+			</div>
+			<div class="btn">
+				<button type="submit">Cadastrar</button>
+			</div>
+		</form>
+		<p>Já tem uma conta? <button id="showLogin">Entre</button></p>
+	</div>
+
+	<script src="js/index.js"></script>
 </body>
 
 </html>
