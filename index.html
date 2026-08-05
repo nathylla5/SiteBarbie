@@ -1,58 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="images/logoBabi.png">
-	<link rel="stylesheet" href="css/index.css">
-	<title>Barbie's Site</title>
-</head>
-
-<body>
-
-	<div id="loginContainer" class="form-container active">
-		<h1 hidden>Barbie</h1>
-		<img src="images/logoBarbie.png" alt="">
-		<form id="loginForm">
-			<div class="input-single">
-				<input type="email" name="email" id="email" class="input" placeholder=" " required>
-				<label for="nome-login">email</label>
-			</div>
-
-			<div class="input-single">
-				<input type="password" name="senha" id="senha" class="input" placeholder=" " required>
-				<label for="senha-login">senha</label>
-			</div>
-			<div class="btn">
-				<button type="submit">Entrar</button>
-			</div>
-		</form>
-		<p>Não tem uma conta? <button id="showCadastro">Cadastre-se</button></p>
-	</div>
-
-	<div id="cadastroContainer" class="form-container">
-		<h1 hidden>Barbie</h1>
-		<img src="images/logoBarbie.png" alt="">
-		<form id="cadastroForm">
-			<div class="input-single">
-				<input type="email" name="cadastroEmail" id="cadastroEmail" class="input" placeholder=" " required>
-				<label for="nome-cadastro">email</label>
-			</div>
-
-			<div class="input-single">
-				<input type="password" name="cadastroSenha" id="cadastroSenha" class="input" placeholder=" " required>
-				<label for="senha-cadastro">senha</label>
-			</div>
-			<div class="btn">
-				<button type="submit">Cadastrar</button>
-			</div>
-		</form>
-		<p>Já tem uma conta? <button id="showLogin">Entre</button></p>
-	</div>
-
-	<script src="js/index.js"></script>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/images/logoBabi.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portal de Filmes da Barbie - Assista aos clássicos da Barbie!" />
+    <title>Barbie's Site - Portal de Filmes</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
