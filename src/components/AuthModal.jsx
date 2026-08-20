@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Mail, Lock, Sparkles, Sun, Moon } from 'lucide-react';
+import { Mail, Lock, Sparkles, Sun, Moon, Loader2 } from 'lucide-react';
+import { apiService } from '../services/api';
 
 export default function AuthModal({ onLoginSuccess, theme, toggleTheme }) {
   const [isRegister, setIsRegister] = useState(false);
@@ -7,8 +8,9 @@ export default function AuthModal({ onLoginSuccess, theme, toggleTheme }) {
   const [password, setPassword] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMsg('');
     setSuccessMsg('');
@@ -18,25 +20,32 @@ export default function AuthModal({ onLoginSuccess, theme, toggleTheme }) {
       return;
     }
 
-    if (isRegister) {
-      localStorage.setItem('barbie_user_email', email.trim().toLowerCase());
-      localStorage.setItem('barbie_user_password', password);
-      setSuccessMsg('Cadastro realizado com sucesso! Faça seu login.');
-      setIsRegister(false);
-      setPassword('');
-    } else {
-      const storedEmail = localStorage.getItem('barbie_user_email');
-      const storedPassword = localStorage.getItem('barbie_user_password');
+    setLoading(true);
 
-      if (
-        (storedEmail && email.trim().toLowerCase() === storedEmail && password === storedPassword) ||
-        email.trim().length > 3
-      ) {
-        localStorage.setItem('barbie_logged_in', email.trim().toLowerCase());
-        onLoginSuccess(email.trim().toLowerCase());
+    try {
+      if (isRegister) {
+        const result = await apiService.register(email, password);
+        if (result.error) {
+          setErrorMsg(result.error);
+        } else {
+          setSuccessMsg(result.message || 'Cadastro realizado com sucesso! Faça seu login.');
+          setIsRegister(false);
+          setPassword('');
+        }
       } else {
-        setErrorMsg('Email ou senha incorretos.');
+        const result = await apiService.login(email, password);
+        if (result.error) {
+          setErrorMsg(result.error);
+        } else {
+          const userEmail = email.trim().toLowerCase();
+          localStorage.setItem('barbie_logged_in', userEmail);
+          onLoginSuccess(userEmail);
+        }
       }
+    } catch (err) {
+      setErrorMsg('Ocorreu um erro na autenticação.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -101,8 +110,8 @@ export default function AuthModal({ onLoginSuccess, theme, toggleTheme }) {
             />
           </div>
 
-          <button type="submit" className="submit-btn">
-            <Sparkles size={18} />
+          <button type="submit" className="submit-btn" disabled={loading}>
+            {loading ? <Loader2 size={18} className="spinner-icon" /> : <Sparkles size={18} />}
             <span>{isRegister ? 'Cadastrar' : 'Entrar'}</span>
           </button>
         </form>

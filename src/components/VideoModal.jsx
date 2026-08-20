@@ -1,18 +1,37 @@
-import React, { useEffect } from 'react';
-import { X, Film, Sparkles } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
+import { X, Film, Sparkles, Loader2 } from 'lucide-react';
 
 export default function VideoModal({ movie, onClose }) {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
+    if (movie) {
+      setIsLoading(true);
+    }
+  }, [movie?.id]);
+
+  useEffect(() => {
+    if (!movie) return;
+
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose();
     };
+
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [onClose]);
+
+    return () => {
+      document.body.style.overflow = originalOverflow || 'unset';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [movie, onClose]);
 
   if (!movie) return null;
 
-  return (
+  const modalJSX = (
     <div className="modal-overlay fade-in" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
@@ -27,14 +46,38 @@ export default function VideoModal({ movie, onClose }) {
 
         <div className="video-container">
           {movie.videoUrl ? (
-            <iframe
-              className="video-iframe"
-              src={movie.videoUrl}
-              title={movie.title}
-              allowFullScreen
-              webkitallowfullscreen="true"
-              mozallowfullscreen="true"
-            ></iframe>
+            <>
+              {/* Loader overlay displayed until iframe completes loading */}
+              {isLoading && (
+                <div className="video-loader fade-in">
+                  <Loader2 size={50} className="spinner-icon" />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                    <Sparkles size={20} style={{ color: 'var(--gold-accent)' }} />
+                    <h3 style={{ fontSize: '1.15rem', textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>
+                      Preparando a mágica... O filme já vai começar!
+                    </h3>
+                    <Sparkles size={20} style={{ color: 'var(--gold-accent)' }} />
+                  </div>
+                  <p style={{ fontSize: '0.85rem', opacity: 0.8 }}>
+                    Carregando player de transmissão
+                  </p>
+                </div>
+              )}
+
+              <iframe
+                className="video-iframe"
+                src={movie.videoUrl}
+                title={movie.title}
+                onLoad={() => setIsLoading(false)}
+                style={{
+                  opacity: isLoading ? 0 : 1,
+                  transition: 'opacity 0.4s ease-in-out'
+                }}
+                allowFullScreen
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+              ></iframe>
+            </>
           ) : (
             <div style={{
               position: 'absolute',
@@ -64,4 +107,6 @@ export default function VideoModal({ movie, onClose }) {
       </div>
     </div>
   );
+
+  return createPortal(modalJSX, document.body);
 }
