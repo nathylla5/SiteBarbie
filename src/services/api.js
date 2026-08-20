@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:4000/api';
+const API_BASE_URL = 'https://sitebarbie-backend.onrender.com/api';
 
 export const apiService = {
   // Verificação de status do Backend
@@ -22,7 +22,6 @@ export const apiService = {
       });
       return await response.json();
     } catch (e) {
-      // Fallback local se backend não estiver respondendo
       localStorage.setItem('barbie_user_email', email.trim().toLowerCase());
       localStorage.setItem('barbie_user_password', password);
       return { message: 'Cadastro salvo localmente!' };
@@ -39,7 +38,6 @@ export const apiService = {
       });
       return await response.json();
     } catch (e) {
-      // Fallback local se backend não estiver respondendo
       const storedEmail = localStorage.getItem('barbie_user_email');
       const storedPassword = localStorage.getItem('barbie_user_password');
       if (
@@ -52,7 +50,7 @@ export const apiService = {
     }
   },
 
-  // Obter catálogo de filmes do backend (ou fallback local)
+  // Obter catálogo de filmes do backend
   async getMovies() {
     try {
       const response = await fetch(`${API_BASE_URL}/movies`);
@@ -67,7 +65,7 @@ export const apiService = {
     }
   },
 
-  // Obter progresso do usuário (assistidos & kanban)
+  // Obter progresso do usuário (assistidos, kanban & tempo assistido)
   async getUserProgress(userId) {
     try {
       const response = await fetch(`${API_BASE_URL}/user/progress?userId=${encodeURIComponent(userId)}`);
@@ -78,13 +76,27 @@ export const apiService = {
     }
   },
 
-  // Salvar/atualizar progresso do usuário
-  async updateUserProgress(userId, movieId, watched, kanbanColumn) {
+  // Salvar/atualizar tempo de reprodução assistido
+  async savePlaybackProgress(userId, movieId, playbackSeconds) {
     try {
       const response = await fetch(`${API_BASE_URL}/user/progress`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId, movieId, watched, kanbanColumn })
+        body: JSON.stringify({ userId, movieId, playbackSeconds })
+      });
+      return await response.json();
+    } catch (e) {
+      return null;
+    }
+  },
+
+  // Salvar/atualizar progresso do usuário completo
+  async updateUserProgress(userId, movieId, watched, kanbanColumn, playbackSeconds) {
+    try {
+      const response = await fetch(`${API_BASE_URL}/user/progress`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId, movieId, watched, kanbanColumn, playbackSeconds })
       });
       return await response.json();
     } catch (e) {

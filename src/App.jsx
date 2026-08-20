@@ -7,6 +7,7 @@ import ProgressBar from './components/ProgressBar';
 import KanbanBoard from './components/KanbanBoard';
 import { MOVIES } from './data/movies';
 import { CHRONOLOGIES } from './data/chronologies';
+import { apiService } from './services/api';
 import { Search, Sparkles, LayoutGrid, Kanban, Film, Info } from 'lucide-react';
 
 export default function App() {
@@ -33,6 +34,31 @@ export default function App() {
   });
 
   // Kanban Board State
+  // Playback Progress State
+  const [playbackProgress, setPlaybackProgress] = useState(() => {
+    try {
+      const userKey = localStorage.getItem('barbie_logged_in') || 'guest';
+      const saved = localStorage.getItem(`barbie_all_playback_${userKey}`);
+      return saved ? JSON.parse(saved) : {};
+    } catch (e) {
+      return {};
+    }
+  });
+
+  const handleProgressUpdate = (movieId, seconds) => {
+    setPlaybackProgress(prev => {
+      const updated = {
+        ...prev,
+        [movieId]: { seconds, updatedAt: new Date().toISOString() }
+      };
+      const userKey = user?.email || user?.id || (typeof user === 'string' ? user : 'guest');
+      try {
+        localStorage.setItem(`barbie_all_playback_${userKey}`, JSON.stringify(updated));
+      } catch (e) {}
+      return updated;
+    });
+  };
+
   const [kanbanState, setKanbanState] = useState(() => {
     try {
       const saved = localStorage.getItem('barbie_kanban_board');
@@ -73,6 +99,40 @@ export default function App() {
     localStorage.setItem('barbie_theme', newTheme);
   };
 
+  // Selecionar filme e mover automaticamente para 'Assistindo Agora' no Kanban
+  const handleSelectMovie = (movie) => {
+    setSelectedMovie(movie);
+    if (!movie) return;
+
+    setKanbanState(prev => {
+      // Se já estiver em 'completed', mantém
+      if (prev.completed && prev.completed.includes(movie.id)) {
+        return prev;
+      }
+
+      const newWant = (prev.wantToWatch || []).filter(id => id !== movie.id);
+      const newWatching = Array.from(new Set([...(prev.watching || []), movie.id]));
+      const newCompleted = (prev.completed || []).filter(id => id !== movie.id);
+
+      const updated = {
+        wantToWatch: newWant,
+        watching: newWatching,
+        completed: newCompleted
+      };
+
+      try {
+        localStorage.setItem('barbie_kanban_board', JSON.stringify(updated));
+      } catch (e) {}
+
+      return updated;
+    });
+
+    if (user) {
+      const userId = user.id || user.email || user;
+      apiService.updateUserProgress(userId, movie.id, watchedIds.includes(movie.id), 'watching').catch(() => {});
+    }
+  };
+
   // Toggle Watched Status
   const toggleWatched = (movieId) => {
     setWatchedIds(prev => {
@@ -83,6 +143,20 @@ export default function App() {
       }
     });
   };
+
+  // Sync user data with backend on login
+  useEffect(() => {
+    if (user) {
+      const userId = user.id || user.email || user;
+      apiService.getUserProgress(userId).then((res) => {
+        if (res && res.configured) {
+          if (res.watchedIds) setWatchedIds(res.watchedIds);
+          if (res.kanbanState) setKanbanState(res.kanbanState);
+          if (res.playbackProgress) setPlaybackProgress(res.playbackProgress);
+        }
+      }).catch((err) => console.warn('Erro ao sincronizar dados com backend:', err));
+    }
+  }, [user]);
 
   // Check login session on mount
   useEffect(() => {
@@ -247,7 +321,7 @@ export default function App() {
                   <MovieCard 
                     key={movie.id} 
                     movie={movie} 
-                    onSelectMovie={(m) => setSelectedMovie(m)} 
+                    onSelectMovie={handleSelectMovie} 
                     isWatched={watchedIds.includes(movie.id)}
                     onToggleWatched={toggleWatched}
                   />
@@ -266,7 +340,7 @@ export default function App() {
             movies={MOVIES}
             kanbanState={kanbanState}
             setKanbanState={setKanbanState}
-            onSelectMovie={(m) => setSelectedMovie(m)}
+            onSelectMovie={handleSelectMovie}
             toggleWatched={toggleWatched}
             watchedIds={watchedIds}
           />
@@ -276,6 +350,12 @@ export default function App() {
       <VideoModal 
         movie={selectedMovie} 
         onClose={() => setSelectedMovie(null)} 
+        user={user}
+        onProgressUpdate={handleProgressUpdate}
+        isWatched={selectedMovie ? watchedIds.includes(selectedMovie.id) : false}
+        onToggleWatched={toggleWatched}
+        kanbanState={kanbanState}
+        setKanbanState={setKanbanState}
       />
 
       <footer className="site-footer">

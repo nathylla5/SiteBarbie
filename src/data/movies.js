@@ -1,13 +1,13 @@
 export const MOVIES = [
   {
     id: 'quebraNozes',
-    title: 'Barbie em O Quebra-Nozes',
+    title: 'Barbie e o Quebra-Nozes',
     year: 2001,
     duration: '76 min',
     image: '/images/QuebraNozes.png',
-    videoUrl: 'https://archive.org/embed/BarbieEmOQuebraNozes20011',
+    videoUrl: 'https://drive.google.com/file/d/1opNzSA_of0VMHaOpTAmwjHWpUYF5j6Qc/preview',
     category: 'Clássicos',
-    genres: ['Fantasia', 'Dança', 'Fábula'],
+    genres: ["Fantasia", "Dança", "Fábula"],
     description: 'Clara ganha um lindo quebra-nozes de presente de sua tia favorita e parte em uma grande aventura mágica para salvar a Terra dos Doces do Rei dos Ratos.',
     order: { lancamento: 1, magico: 1, moderno: 99, multiverso: 1, teoriaFas: 5 }
   },
@@ -17,57 +17,57 @@ export const MOVIES = [
     year: 2002,
     duration: '84 min',
     image: '/images/Rapunzel.png',
-    videoUrl: 'https://archive.org/embed/BarbieComoRapunzel2002',
+    videoUrl: 'https://drive.google.com/file/d/15lYhN_jTurhqWQewYgG_vskYeGfIj0oM/preview',
     category: 'Clássicos',
-    genres: ['Arte', 'Fantasia', 'Fábula'],
+    genres: ["Arte", "Fantasia", "Fábula"],
     description: 'Rapunzel descobre um pincel mágico que revela a verdade e a ajuda a se libertar da torre alta de Gothel para salvar dois reinos rivais.',
     order: { lancamento: 2, magico: 2, moderno: 99, multiverso: 2, teoriaFas: 6 }
   },
   {
     id: 'lagoCisnes',
-    title: 'Barbie em O Lago dos Cisnes',
+    title: 'Barbie do Lago dos Cisnes',
     year: 2003,
     duration: '83 min',
     image: '/images/LagoCisnes.png',
-    videoUrl: 'https://archive.org/embed/BarbieLagoDosCisnes20031_201711',
+    videoUrl: 'https://drive.google.com/file/d/17FsAQTZvau3dOmvQsE2cwnpqwdd2EffF/preview',
     category: 'Clássicos',
-    genres: ['Dança', 'Magia', 'Fábula'],
+    genres: ["Dança", "Magia", "Fábula"],
     description: 'Odette descobre a Floresta Encantada e é transformada em cisne pelo bruxo malvado Rothbart, precisando de coragem para desfazer a maldição.',
     order: { lancamento: 3, magico: 3, moderno: 99, multiverso: 3, teoriaFas: 4 }
   },
   {
     id: 'princesaPlebeia',
-    title: 'Barbie como A Princesa e a Plebeia',
+    title: 'Barbie: A Princesa e a Plebeia',
     year: 2004,
     duration: '85 min',
     image: '/images/PrincesPlebeia.png',
-    videoUrl: 'https://player.vimeo.com/video/445744954?h=452556e305',
+    videoUrl: 'https://drive.google.com/file/d/1-cFep_X_Sc2eF1g__KLWKEFy3G5t4lHz/preview',
     category: 'Musicais',
-    genres: ['Musical', 'Princesas', 'Troca de Papéis'],
+    genres: ["Musical", "Princesas", "Troca de Papéis"],
     description: 'A princesa Anneliese e a plebeia Erika trocam de lugar para salvar o reino do ambicioso Preminger em um inesquecível musical clássico.',
-    order: { lancamento: 4, magico: 4, moderno: 99, multiverso: 4, teoriaFas: 4 }
+    order: { lancamento: 4, magico: 4, moderno: 99, multiverso: 4, teoriaFas: 3 }
   },
   {
     id: 'fairytopia',
-    title: 'Barbie: Fairytopia',
+    title: 'Barbie Fairytopia',
     year: 2005,
     duration: '75 min',
     image: '/images/Fairytopia.png',
-    videoUrl: 'https://archive.org/embed/BarbieFairytopiaMermaidia2006',
+    videoUrl: 'https://drive.google.com/file/d/11yF1RfEnIVodRnyFqXE0QjH6lLaD5x7p/preview',
     category: 'Fadas & Magia',
-    genres: ['Fadas', 'Aventura', 'Magia'],
+    genres: ["Fadas", "Aventura", "Magia"],
     description: 'Elina, uma fada sem asas, embarca em uma jornada mágica para salvar a terra das fadas da malvada Laverna.',
     order: { lancamento: 5, magico: 5, moderno: 99, multiverso: 5, teoriaFas: 7 }
   },
   {
     id: 'magiaAladus',
-    title: 'Barbie e a Magia de Aladus',
+    title: 'Barbie e a Magia do Pégaso',
     year: 2005,
     duration: '85 min',
     image: '/images/MagiaAladus.png',
-    videoUrl: 'https://archive.org/embed/BarbieEAMagiaDeAladus',
+    videoUrl: 'https://drive.google.com/file/d/122J19ZFSSMv7IMcJf50dEESX1-v9bEHs/preview',
     category: 'Fantasias',
-    genres: ['Magia', 'Pégaso', 'Reinos'],
+    genres: ["Magia", "Pégaso", "Reinos"],
     description: 'Annika viaja até o Reino das Nuvens para quebrar o feitiço de Wenlock e salvar seus pais e sua irmã transformada em pégaso.',
     order: { lancamento: 6, magico: 6, moderno: 99, multiverso: 6, teoriaFas: 8 }
   },
@@ -77,23 +77,35 @@ export const MOVIES = [
     year: 2006,
     duration: '75 min',
     image: '/images/AventuraFairytopia.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/1-5_3LGjPIvKSFRbTsTQpvp_i8SZzKMWV/preview',
     category: 'Fadas & Magia',
-    genres: ['Sereias', 'Fadas', 'Aventura'],
+    genres: ["Sereias", "Fadas", "Aventura"],
     description: 'Elina viaja para o reino subaquático das sereias para resgatar o Príncipe Nalu com a ajuda da destemida sereia Nori.',
     order: { lancamento: 7, magico: 7, moderno: 99, multiverso: 7, teoriaFas: 9 }
   },
   {
+    id: 'diarioBarbie',
+    title: 'O Diário da Barbie',
+    year: 2006,
+    duration: '70 min',
+    image: '/images/DiarioBrabie.png',
+    videoUrl: null,
+    category: 'Modernos',
+    genres: ["Escola", "Diário", "Música"],
+    description: 'Barbie começa o segundo ano do ensino médio com um diário mágico que passa a realizar seus desejos e sonhos.',
+    order: { lancamento: 8, magico: 99, moderno: 1, multiverso: 8, teoriaFas: 10 }
+  },
+  {
     id: 'dozePrincesas',
-    title: 'Barbie em As 12 Princesas Bailarinas',
+    title: 'Barbie e as 12 Princesas Bailarinas',
     year: 2006,
     duration: '82 min',
     image: '/images/DozePrincesas.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/1-0wz2PQXHHukISA9MMNGhoinffvcOZOi/preview',
     category: 'Princesas',
-    genres: ['Dança', 'Princesas', 'Mundo Mágico'],
+    genres: ["Dança", "Princesas", "Mundo Mágico"],
     description: 'Genevieve e suas 11 irmãs descobrem uma passagem secreta no castelo para um mundo mágico onde a dança é a chave para vencer o mal.',
-    order: { lancamento: 8, magico: 8, moderno: 99, multiverso: 8, teoriaFas: 3 }
+    order: { lancamento: 9, magico: 8, moderno: 99, multiverso: 9, teoriaFas: 11 }
   },
   {
     id: 'magiaArcoIris',
@@ -101,35 +113,35 @@ export const MOVIES = [
     year: 2007,
     duration: '75 min',
     image: '/images/Fairytopia_2.png',
-    videoUrl: 'https://archive.org/embed/BarbieFairytopiaAMagiaDoArcoIris',
+    videoUrl: 'https://drive.google.com/file/d/1aaO0kzWGKw2ksjpY_bRRuaz-BF0wAzhc/preview',
     category: 'Fadas & Magia',
-    genres: ['Fadas', 'Escola', 'Magia'],
+    genres: ["Fadas", "Escola", "Magia"],
     description: 'Elina vai para o Palácio de Cristal aprender o Voo da Primavera e precisa deter Laverna pela última vez.',
-    order: { lancamento: 9, magico: 9, moderno: 99, multiverso: 9, teoriaFas: 10 }
+    order: { lancamento: 10, magico: 9, moderno: 99, multiverso: 10, teoriaFas: 12 }
   },
   {
     id: 'princesaIlha',
-    title: 'Barbie em A Princesa da Ilha',
+    title: 'Barbie e a Princesa da Ilha',
     year: 2007,
     duration: '85 min',
     image: '/images/PrincesaIlha.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/1ndQzr3wBXdg7H9OwgudlVQ-LQlNtsimr/preview',
     category: 'Musicais',
-    genres: ['Animais', 'Ilha', 'Musical'],
+    genres: ["Animais", "Ilha", "Musical"],
     description: 'Ro é criada por animais em uma ilha tropical e descobre suas origens reais ao viajar para o reino do Príncipe Antonio.',
-    order: { lancamento: 10, magico: 10, moderno: 99, multiverso: 10, teoriaFas: 2 }
+    order: { lancamento: 11, magico: 10, moderno: 99, multiverso: 11, teoriaFas: 2 }
   },
   {
     id: 'butterfly',
-    title: 'Barbie Butterfly e a sua Fada Amiga',
+    title: 'Barbie: Mariposa',
     year: 2008,
     duration: '75 min',
     image: '/images/ButteflyPrincesaFairy.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/17ys59rGWxSbFo80keBd7V0dcs9WnWCDn/preview',
     category: 'Fadas & Magia',
-    genres: ['Fadas', 'Aventura', 'Amizade'],
-    description: 'Butterfly é uma fada leitora que precisa buscar o antídoto mágica fora das fronteiras para salvar a Rainha das Fadas.',
-    order: { lancamento: 11, magico: 11, moderno: 99, multiverso: 11, teoriaFas: 11 }
+    genres: ["Fadas", "Aventura", "Amizade"],
+    description: 'Mariposa é uma fada leitora que precisa buscar o antídoto mágica fora das fronteiras para salvar a Rainha das Fadas de Flutterfield.',
+    order: { lancamento: 12, magico: 11, moderno: 99, multiverso: 12, teoriaFas: 13 }
   },
   {
     id: 'casteloDiamante',
@@ -137,35 +149,35 @@ export const MOVIES = [
     year: 2008,
     duration: '79 min',
     image: '/images/CasteloDiamante.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/1ZwtgNs5wnMFfhFZij0JRDC-gkIbuFpcG/preview',
     category: 'Musicais',
-    genres: ['Música', 'Amizade', 'Espelho Mágico'],
+    genres: ["Música", "Amizade", "Espelho Mágico"],
     description: 'Liana e Alexa usam a música e a força da amizade verdadeira para libertar uma jovem fada presa em um espelho mágico.',
-    order: { lancamento: 12, magico: 12, moderno: 99, multiverso: 12, teoriaFas: 1 }
+    order: { lancamento: 13, magico: 12, moderno: 99, multiverso: 13, teoriaFas: 1 }
   },
   {
     id: 'cancaoNatal',
-    title: 'Barbie em A Canção de Natal',
+    title: 'Barbie no Conto de Natal',
     year: 2008,
     duration: '76 min',
     image: '/images/CancaoNatal.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/120uqmVDIyy6mtWSnzawhIXeIXXORT6MQ/preview',
     category: 'Especiais',
-    genres: ['Natal', 'Teatro', 'Redenção'],
+    genres: ["Natal", "Teatro", "Redenção"],
     description: 'Eden Starling é uma diva de teatro vitoriana que aprende o valor do Natal com a visita de três fadas espirituosas.',
-    order: { lancamento: 13, magico: 13, moderno: 99, multiverso: 13, teoriaFas: 12 }
+    order: { lancamento: 14, magico: 13, moderno: 2, multiverso: 14, teoriaFas: 14 }
   },
   {
     id: 'pequenaPolegar',
-    title: 'Barbie em A Pequena Polegar',
+    title: 'Barbie Apresenta Polegarzinha',
     year: 2009,
     duration: '75 min',
     image: '/images/PequenaPolegar.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/1wn5-zSrXT1V2soHCmtB0VuKpppHScdl5/preview',
     category: 'Fantasias',
-    genres: ['Natureza', 'Flores', 'Amizade'],
-    description: 'Polegarina vive em um prado mágico e se une a uma garota humana para proteger o habitat das fadas das flores.',
-    order: { lancamento: 14, magico: 14, moderno: 99, multiverso: 14, teoriaFas: 13 }
+    genres: ["Natureza", "Flores", "Amizade"],
+    description: 'Polegarzinha vive em um prado mágico e se une a uma garota humana para proteger o habitat das fadas das flores.',
+    order: { lancamento: 15, magico: 14, moderno: 3, multiverso: 15, teoriaFas: 15 }
   },
   {
     id: 'tresMosqueteiras',
@@ -173,11 +185,11 @@ export const MOVIES = [
     year: 2009,
     duration: '81 min',
     image: '/images/TresMosqueteiras.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/12KOR8PuFpvLeYTx71fIHB4MozFeVixHH/preview',
     category: 'Aventura',
-    genres: ['Ação', 'Paris', 'Empoderamento'],
+    genres: ["Ação", "Paris", "Empoderamento"],
     description: 'Corinne realiza seu sonho de ir a Paris e treinar em segredo com três criadas para defender a vida do príncipe.',
-    order: { lancamento: 15, magico: 15, moderno: 99, multiverso: 15, teoriaFas: 14 }
+    order: { lancamento: 16, magico: 15, moderno: 4, multiverso: 16, teoriaFas: 16 }
   },
   {
     id: 'vidaSereia',
@@ -185,11 +197,11 @@ export const MOVIES = [
     year: 2010,
     duration: '75 min',
     image: '/images/VidaSereia.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/12JtfbIiHxT3yusEz0fBCYSrZ5QR0derc/preview',
     category: 'Sereias',
-    genres: ['Surf', 'Sereias', 'Oceano'],
+    genres: ["Surf", "Sereias", "Oceano"],
     description: 'Merliah é uma surfista de Malibu que descobre ser metade sereia e precisa salvar a rainha do reino marinho de Oceanis.',
-    order: { lancamento: 16, magico: 16, moderno: 1, multiverso: 16, teoriaFas: 15 }
+    order: { lancamento: 17, magico: 16, moderno: 5, multiverso: 17, teoriaFas: 17 }
   },
   {
     id: 'modaMagia',
@@ -197,23 +209,23 @@ export const MOVIES = [
     year: 2010,
     duration: '79 min',
     image: '/images/ModaMagia.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/1-kCUerVR2kTJo55gyh5sm5ksKRcu05Bc/preview',
     category: 'Modernos',
-    genres: ['Moda', 'Paris', 'Fadas'],
+    genres: ["Moda", "Paris", "Fadas"],
     description: 'Barbie viaja para Paris e une forças com fadas da moda para salvar a decadente Maison de sua tia Millicent.',
-    order: { lancamento: 17, magico: 99, moderno: 2, multiverso: 17, teoriaFas: 16 }
+    order: { lancamento: 18, magico: 17, moderno: 6, multiverso: 18, teoriaFas: 18 }
   },
   {
     id: 'segredoFadas',
-    title: 'Barbie e o Segredo das Fadas',
+    title: 'Barbie: O Segredo das Fadas',
     year: 2011,
     duration: '72 min',
     image: '/images/SegredoFadas.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/1-hL4NkO7im07CM8mYKymuTbfUrQQFrst/preview',
     category: 'Fadas & Magia',
-    genres: ['Fadas', 'Reino Secreto', 'Resgate'],
+    genres: ["Fadas", "Reino Secreto", "Resgate"],
     description: 'Barbie e Raquelle viajam para Glosseron, um mundo secreto de fadas urbanas, para impedir que Ken se case com a Rainha Graciella.',
-    order: { lancamento: 18, magico: 17, moderno: 3, multiverso: 18, teoriaFas: 17 }
+    order: { lancamento: 19, magico: 18, moderno: 7, multiverso: 19, teoriaFas: 19 }
   },
   {
     id: 'escolaPrincesas',
@@ -221,23 +233,23 @@ export const MOVIES = [
     year: 2011,
     duration: '72 min',
     image: '/images/EscolaPrincesas.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/1-vseASC0sYBKk4MI5qM6H4YqSyooYSDi/preview',
     category: 'Princesas',
-    genres: ['Escola', 'Realeza', 'Segredo'],
+    genres: ["Escola", "Realeza", "Segredo"],
     description: 'Blair Willows é sorteada para estudar na prestigiada Escola de Princesas e descobre ser a herdeira perdida de Gardania.',
-    order: { lancamento: 19, magico: 18, moderno: 4, multiverso: 19, teoriaFas: 18 }
+    order: { lancamento: 20, magico: 19, moderno: 8, multiverso: 20, teoriaFas: 20 }
   },
   {
     id: 'natalPerfeito',
-    title: 'Barbie: Um Natal Perfeito',
+    title: 'Barbie: Feliz Natal',
     year: 2011,
     duration: '74 min',
     image: '/images/NatalPerfeito.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/1011RGyMFCpxNMEZ6v_tpV1XapVFvku3o/preview',
     category: 'Especiais',
-    genres: ['Natal', 'Irmãs', 'Música'],
+    genres: ["Natal", "Irmãs", "Música"],
     description: 'Barbie e suas irmãs sofrem um atraso de viagem no Natal e acabam fazendo um show inesquecível em uma acolhedora pousada.',
-    order: { lancamento: 20, magico: 99, moderno: 5, multiverso: 20, teoriaFas: 19 }
+    order: { lancamento: 21, magico: 99, moderno: 9, multiverso: 21, teoriaFas: 21 }
   },
   {
     id: 'vidaSereia2',
@@ -245,23 +257,23 @@ export const MOVIES = [
     year: 2012,
     duration: '74 min',
     image: '/images/VidaSereia_2.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/12MJohjE0hg8vfPF1tXnjDYcawRbN1Zt1/preview',
     category: 'Sereias',
-    genres: ['Surf', 'Austrália', 'Sereias'],
+    genres: ["Surf", "Austrália", "Sereias"],
     description: 'Merliah participa do campeonato mundial de surf na Austrália e defende a magia de Oceanis contra a vilã Eris.',
-    order: { lancamento: 21, magico: 19, moderno: 6, multiverso: 21, teoriaFas: 20 }
+    order: { lancamento: 22, magico: 20, moderno: 10, multiverso: 22, teoriaFas: 22 }
   },
   {
     id: 'princesaPopstar',
-    title: 'Barbie: A Princesa e a Popstar',
+    title: 'Barbie: A Princesa e a Pop Star',
     year: 2012,
     duration: '76 min',
     image: '/images/PrincesaPopStar.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/1iDEButKIdcbVFWsG3PbU593zgB7MiXZ4/preview',
     category: 'Musicais',
-    genres: ['Música', 'Troca de Identidade', 'Pop'],
+    genres: ["Música", "Troca de Identidade", "Pop"],
     description: 'A princesa Tori e a estrela da música Keira trocam de lugar usando microfones e escovas mágicas de transformação.',
-    order: { lancamento: 22, magico: 20, moderno: 7, multiverso: 22, teoriaFas: 21 }
+    order: { lancamento: 23, magico: 21, moderno: 11, multiverso: 23, teoriaFas: 23 }
   },
   {
     id: 'sapatilhasMagicas',
@@ -269,215 +281,203 @@ export const MOVIES = [
     year: 2013,
     duration: '75 min',
     image: '/images/SapatilhasMagicas.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/1-0lhHnAlfTeovFMNDsVu2SdlxY9IRGvf/preview',
     category: 'Dança',
-    genres: ['Balé', 'Mundo Mágico', 'Paixão'],
+    genres: ["Balé", "Mundo Mágico", "Paixão"],
     description: 'Kristyn calça sapatilhas rosa mágicas que a levam diretamente para o mundo lendário dos balés Giselle e O Lago dos Cisnes.',
-    order: { lancamento: 23, magico: 21, moderno: 8, multiverso: 23, teoriaFas: 22 }
+    order: { lancamento: 24, magico: 22, moderno: 12, multiverso: 24, teoriaFas: 24 }
   },
   {
     id: 'butterflyPrincesaFairy',
-    title: 'Barbie Butterfly e a Princesa Fada',
+    title: 'Barbie: Mariposa e a Princesa das Fadas',
     year: 2013,
     duration: '73 min',
     image: '/images/ButteflyPrincesaFairy.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/1-7FiehfBugVnllSujKrXEN11CdkIne8I/preview',
     category: 'Fadas & Magia',
-    genres: ['Fadas', 'Cristal', 'União'],
-    description: 'Butterfly é nomeada embaixadora na terra das Fadas dos Cristais e faz amizade com a tímida Princesa Catania.',
-    order: { lancamento: 24, magico: 22, moderno: 99, multiverso: 24, teoriaFas: 23 }
+    genres: ["Fadas", "Cristal", "União"],
+    description: 'Mariposa é nomeada embaixadora na terra das Fadas dos Cristais e faz amizade com a tímida Princesa Catania.',
+    order: { lancamento: 25, magico: 23, moderno: 99, multiverso: 25, teoriaFas: 25 }
   },
   {
     id: 'aventuraCavalo',
-    title: 'Barbie e suas Irmãs em Uma Aventura de Cavalos',
+    title: 'Barbie e Suas Irmãs em Uma Aventura de Cavalos',
     year: 2013,
     duration: '72 min',
     image: '/images/AventuraCavalo.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/1-IyMuLRWK5pP1DmtqhEtyP90ALTZ9dr8/preview',
     category: 'Aventura',
-    genres: ['Equitação', 'Alpes', 'Família'],
+    genres: ["Equitação", "Alpes", "Família"],
     description: 'Barbie e suas irmãs passam o verão em uma academia de equitação nos Alpes Suíços e encontram um cavalo selvagem lendário.',
-    order: { lancamento: 25, magico: 99, moderno: 9, multiverso: 25, teoriaFas: 24 }
+    order: { lancamento: 26, magico: 99, moderno: 13, multiverso: 26, teoriaFas: 26 }
   },
   {
     id: 'sereiaPerolas',
-    title: 'Barbie A Sereia das Pérolas',
+    title: 'Barbie: A Princesa das Pérolas',
     year: 2014,
     duration: '73 min',
     image: '/images/SereiaPerolas.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/1XrK0HdbOmm0Crk9bMpFQ0eS3PT1h3vmK/preview',
     category: 'Sereias',
-    genres: ['Pérolas', 'Cabelos', 'Realeza'],
+    genres: ["Pérolas", "Cabelos", "Realeza"],
     description: 'Lumina é uma sereia cabeleireira com a habilidade mágica de fazer pérolas dançarem e brilharem para o baile real.',
-    order: { lancamento: 26, magico: 23, moderno: 99, multiverso: 26, teoriaFas: 25 }
+    order: { lancamento: 27, magico: 24, moderno: 99, multiverso: 27, teoriaFas: 27 }
   },
   {
     id: 'portalSecreto',
-    title: 'Barbie e o Portal Secreto',
+    title: 'Barbie e a Porta Secreta',
     year: 2014,
     duration: '81 min',
     image: '/images/PortalSecreto.png',
-    videoUrl: null,
+    videoUrl: 'https://drive.google.com/file/d/1P3GR7MeEKI-95xDOLa4aUCr-KXKyr6VY/preview',
     category: 'Princesas',
-    genres: ['Jardim', 'Vara Mágica', 'Leitura'],
+    genres: ["Jardim", "Vara Mágica", "Leitura"],
     description: 'A tímida Princesa Alexa encontra uma porta secreta em seu jardim real que leva a um mundo repleto de fadas, sereias e unicórnios.',
-    order: { lancamento: 27, magico: 24, moderno: 99, multiverso: 27, teoriaFas: 26 }
+    order: { lancamento: 28, magico: 25, moderno: 99, multiverso: 28, teoriaFas: 28 }
   },
   {
     id: 'superPrincesa',
-    title: 'Barbie Super Princesa',
+    title: 'Barbie: Super Princesa',
     year: 2015,
     duration: '74 min',
-    image: '/images/logoBarbie.png',
-    videoUrl: null,
+    image: '/images/SuperPrincesa.png',
+    videoUrl: 'https://drive.google.com/file/d/10GHU23KLTGuAktEg9T7xB1PtyBBsbv3h/preview',
     category: 'Aventura',
-    genres: ['Super-Heróis', 'Poderes', 'Justiça'],
+    genres: ["Super-Heróis", "Poderes", "Justiça"],
     description: 'Kara é beijada por uma borboleta mágica e ganha superpoderes, transformando-se na heroína Super Sparkle.',
-    order: { lancamento: 28, magico: 25, moderno: 10, multiverso: 28, teoriaFas: 27 }
+    order: { lancamento: 29, magico: 26, moderno: 14, multiverso: 29, teoriaFas: 29 }
   },
   {
     id: 'rainhasDoRock',
-    title: 'Barbie em Rainhas do Rock',
+    title: 'Barbie: Rock ’n Royals',
     year: 2015,
     duration: '84 min',
-    image: '/images/logoBarbie.png',
-    videoUrl: null,
+    image: '/images/RockRoyals.png',
+    videoUrl: 'https://drive.google.com/file/d/1-DGUaJg453LKhgseqG603_kbVLPxsrkZ/preview',
     category: 'Musicais',
-    genres: ['Acampamento', 'Rock', 'Fusão'],
+    genres: ["Acampamento", "Rock", "Fusão"],
     description: 'A princesa Courtney e a estrela do rock Erika são enviadas por engano para acampamentos de férias trocados.',
-    order: { lancamento: 29, magico: 99, moderno: 11, multiverso: 29, teoriaFas: 28 }
+    order: { lancamento: 30, magico: 99, moderno: 15, multiverso: 30, teoriaFas: 30 }
   },
   {
     id: 'aventuraCachorrinhos',
-    title: 'Barbie e suas Irmãs em Uma Aventura de Cachorrinhos',
+    title: 'Barbie e Suas Irmãs na Grande Aventura dos Cachorrinhos',
     year: 2015,
     duration: '72 min',
-    image: '/images/logoBarbie.png',
-    videoUrl: null,
+    image: '/images/GrandeAventuraCachorrinhos.png',
+    videoUrl: 'https://drive.google.com/file/d/10VMlX7Sih07e2_Z927iHoLhf0kmQxDgi/preview',
     category: 'Aventura',
-    genres: ['Cachorrinhos', 'Caça ao Tesouro', 'Família'],
+    genres: ["Cachorrinhos", "Caça ao Tesouro", "Família"],
     description: 'Barbie e suas irmãs voltam para sua cidade natal e seguem o mapa de um tesouro antigo com seus filhotes fofos.',
-    order: { lancamento: 30, magico: 99, moderno: 12, multiverso: 30, teoriaFas: 29 }
+    order: { lancamento: 31, magico: 99, moderno: 16, multiverso: 31, teoriaFas: 31 }
   },
   {
     id: 'agentesSecretas',
-    title: 'Barbie: Agentes Secretas',
+    title: 'Barbie: Agente Secreta',
     year: 2016,
     duration: '75 min',
-    image: '/images/logoBarbie.png',
-    videoUrl: null,
+    image: '/images/AgenteSecreta.png',
+    videoUrl: 'https://drive.google.com/file/d/1-9PRQosWTiORMd5pCkKUCDSpKhiR4HkX/preview',
     category: 'Aventura',
-    genres: ['Ginástica', 'Espionagem', 'Tecnologia'],
+    genres: ["Ginástica", "Espionagem", "Tecnologia"],
     description: 'Barbie e suas amigas ginastas são recrutadas por uma agência secreta de espionagem para capturar uma ladra de joias.',
-    order: { lancamento: 31, magico: 99, moderno: 13, multiverso: 31, teoriaFas: 30 }
-  },
-  {
-    id: 'buscaCachorrinhos',
-    title: 'Barbie e suas Irmãs em Busca dos Cachorrinhos',
-    year: 2016,
-    duration: '75 min',
-    image: '/images/logoBarbie.png',
-    videoUrl: null,
-    category: 'Aventura',
-    genres: ['Havaí', 'Dança', 'Resgate'],
-    description: 'Em uma viagem festiva ao Havaí, os filhotes das irmãs se perdem antes da competição nacional de dança.',
-    order: { lancamento: 32, magico: 99, moderno: 14, multiverso: 32, teoriaFas: 31 }
+    order: { lancamento: 32, magico: 99, moderno: 17, multiverso: 32, teoriaFas: 32 }
   },
   {
     id: 'aventuraEstrelas',
     title: 'Barbie: Aventura nas Estrelas',
     year: 2016,
     duration: '79 min',
-    image: '/images/logoBarbie.png',
-    videoUrl: null,
+    image: '/images/AventuraEstrelas.png',
+    videoUrl: 'https://drive.google.com/file/d/10V1PvNBXRqbu0ZFzR-D_HZ2R8evDIIz9/preview',
     category: 'Fantasias',
-    genres: ['Ficção Científica', 'Espaço', 'Prancha voadora'],
+    genres: ["Ficção Científica", "Espaço", "Prancha voadora"],
     description: 'Barbie viaja pela galáxia em sua prancha flutuante para salvar as estrelas dançantes que estão perdendo o brilho.',
-    order: { lancamento: 33, magico: 26, moderno: 99, multiverso: 33, teoriaFas: 32 }
+    order: { lancamento: 33, magico: 27, moderno: 99, multiverso: 33, teoriaFas: 33 }
   },
   {
     id: 'mundoVideogame',
-    title: 'Barbie em Um Mundo de Videogame',
+    title: 'Barbie em Um Mundo de Video Game',
     year: 2017,
     duration: '72 min',
-    image: '/images/logoBarbie.png',
+    image: '/images/MundoVideoGame.png',
     videoUrl: null,
-    category: 'Modernos',
-    genres: ['Jogos', 'Pixel', 'Código'],
+    category: 'Fantasias',
+    genres: ["Videogame", "Retro", "Avatar"],
     description: 'Barbie é magicamente puxada para dentro de seu jogo de computador favorito e assume o controle do avatar de patins.',
-    order: { lancamento: 34, magico: 99, moderno: 15, multiverso: 34, teoriaFas: 33 }
+    order: { lancamento: 35, magico: 99, moderno: 19, multiverso: 35, teoriaFas: 35 }
   },
   {
     id: 'golfinhosMagicos',
     title: 'Barbie e os Golfinhos Mágicos',
     year: 2017,
     duration: '63 min',
-    image: '/images/logoBarbie.png',
+    image: '/images/GolfinhosMagicos.png',
     videoUrl: null,
     category: 'Sereias',
-    genres: ['Golfinhos', 'Barreira de Corais', 'Sereias'],
+    genres: ["Golfinhos", "Barreira de Corais", "Sereias"],
     description: 'Ken faz um estágio de biologia marinha em um resort tropical e Barbie descobre golfinhos de joias raríssimos.',
-    order: { lancamento: 35, magico: 27, moderno: 16, multiverso: 35, teoriaFas: 34 }
+    order: { lancamento: 36, magico: 28, moderno: 20, multiverso: 36, teoriaFas: 36 }
   },
   {
     id: 'princessAdventure',
-    title: 'Barbie Princess Adventure',
+    title: 'Barbie: Aventura de Princesas',
     year: 2020,
     duration: '72 min',
     image: '/images/logoBarbie.png',
     videoUrl: null,
     category: 'Musicais',
-    genres: ['Redes Sociais', 'Floravia', 'Autenticidade'],
-    description: 'Barbie viaja para o país de Floravia para encontrar a Princesa Amelia, sua sosias que quer aprender a ser verdadeira.',
-    order: { lancamento: 36, magico: 28, moderno: 17, multiverso: 36, teoriaFas: 35 }
+    genres: ["Redes Sociais", "Floravia", "Autenticidade"],
+    description: 'Barbie descobre o poder de encontrar sua própria voz ao trocar de lugar com sua sósia real, a Princesa Amelia de Floravia.',
+    order: { lancamento: 37, magico: 29, moderno: 21, multiverso: 37, teoriaFas: 37 }
   },
   {
     id: 'lostBirthday',
-    title: 'Barbie & Chelsea: The Lost Birthday',
+    title: 'Barbie e Chelsea: O Aniversário Perdido',
     year: 2021,
     duration: '60 min',
     image: '/images/logoBarbie.png',
     videoUrl: null,
     category: 'Aventura',
-    genres: ['Navio', 'Aniversário', 'Selva'],
-    description: 'Chelsea acha que perdeu seu 7º aniversário ao cruzar a linha internacional de data durante um cruzeiro em família.',
-    order: { lancamento: 37, magico: 99, moderno: 18, multiverso: 37, teoriaFas: 36 }
+    genres: ["Aniversário", "Navio", "Ilha"],
+    description: 'Chelsea tenta salvar seu aniversário de sete anos perdido quando o navio da família cruza a Linha Internacional de Data.',
+    order: { lancamento: 38, magico: 99, moderno: 22, multiverso: 38, teoriaFas: 38 }
   },
   {
     id: 'bigCityBigDreams',
-    title: 'Barbie: Big City, Big Dreams',
+    title: 'Barbie: Grande Cidade, Grandes Sonhos',
     year: 2021,
     duration: '60 min',
     image: '/images/logoBarbie.png',
     videoUrl: null,
     category: 'Musicais',
-    genres: ['Nova York', 'Broadway', 'Duet'],
-    description: 'Barbie Roberts troca Malibu por Nova York e conhece outra garota genial também chamada Barbie Roberts.',
-    order: { lancamento: 38, magico: 99, moderno: 19, multiverso: 38, teoriaFas: 37 }
+    genres: ["Nova York", "Música", "Amizade"],
+    description: 'Barbie Roberts de Malibu viaja para um curso de verão em Nova York e faz amizade com outra talentosa Barbie Roberts de Brooklyn.',
+    order: { lancamento: 39, magico: 99, moderno: 23, multiverso: 39, teoriaFas: 39 }
   },
   {
     id: 'mermaidPower',
-    title: 'Barbie: Mermaid Power',
+    title: 'Barbie: Poder de Sereia',
     year: 2022,
     duration: '60 min',
     image: '/images/logoBarbie.png',
     videoUrl: null,
     category: 'Sereias',
-    genres: ['Pacifica', 'Poderes', 'Desafio'],
-    description: 'Barbie de Malibu e Barbie de Nova York viram sereias mágicas na ilha de Pacifica para salvar o reino do mar.',
-    order: { lancamento: 39, magico: 29, moderno: 20, multiverso: 39, teoriaFas: 38 }
+    genres: ["Sereias", "Poderes", "Oceano"],
+    description: 'Barbie Malibu e Barbie Brooklyn se transformam em sereias para ajudar a salvar o mundo marinho de Pacifica.',
+    order: { lancamento: 40, magico: 30, moderno: 24, multiverso: 40, teoriaFas: 40 }
   },
   {
     id: 'epicRoadTrip',
-    title: 'Barbie: Epic Road Trip',
+    title: 'Barbie: Uma Viagem Inesquecível',
     year: 2022,
     duration: '36 min',
     image: '/images/logoBarbie.png',
     videoUrl: null,
-    category: 'Modernos',
-    genres: ['Interativo', 'Viagem', 'Escolhas'],
-    description: 'Um filme interativo em que o público escolhe o caminho de Barbie e suas amigas em uma grande viagem de carro.',
-    order: { lancamento: 40, magico: 99, moderno: 21, multiverso: 40, teoriaFas: 39 }
+    category: 'Interactive',
+    genres: ["Viagem", "Escolhas", "Cross-Country"],
+    description: 'Nesta aventura interativa, Barbie e suas amigas fazem uma viagem cross-country onde o público decide os rumos da história.',
+    order: { lancamento: 41, magico: 99, moderno: 25, multiverso: 41, teoriaFas: 41 }
   },
   {
     id: 'barbieLiveAction',
@@ -486,10 +486,22 @@ export const MOVIES = [
     duration: '114 min',
     image: '/images/logoBarbie.png',
     videoUrl: null,
+    category: 'Cinema',
+    genres: ["Live-Action", "Mundo Real", "Comédia"],
+    description: 'Barbie deixa a perfeita Barbieland e embarca para o mundo real com Ken em uma jornada de autodescoberta premiada nos cinemas.',
+    order: { lancamento: 42, magico: 99, moderno: 26, multiverso: 42, teoriaFas: 42 }
+  },
+  {
+    id: 'skipperBabas',
+    title: 'Barbie: Skipper e a Grande Aventura de Babá',
+    year: 2023,
+    duration: '60 min',
+    image: '/images/logoBarbie.png',
+    videoUrl: null,
     category: 'Modernos',
-    genres: ['Cinema', 'Comédia', 'Metalinguagem'],
-    description: 'Vencedor do Oscar, Barbie sai da Barbieland para o mundo real em busca de respostas sobre sua existência e sentimentos.',
-    order: { lancamento: 41, magico: 99, moderno: 22, multiverso: 41, teoriaFas: 40 }
+    genres: ["Babás", "Trabalho", "Verão"],
+    description: 'Skipper usa seu talento para cuidar de crianças para abrir um negócio de babás e salvar o parque aquático local.',
+    order: { lancamento: 43, magico: 99, moderno: 27, multiverso: 43, teoriaFas: 43 }
   },
   {
     id: 'stacieAoResgate',
@@ -499,8 +511,20 @@ export const MOVIES = [
     image: '/images/logoBarbie.png',
     videoUrl: null,
     category: 'Aventura',
-    genres: ['Stacie', 'Resgate', 'Irmãs'],
-    description: 'Stacie usa suas habilidades rápidas para resgatar Barbie e a família quando um festival de praia fica em apuros.',
-    order: { lancamento: 42, magico: 99, moderno: 23, multiverso: 42, teoriaFas: 41 }
+    genres: ["Irmãs", "Resgate", "Ação"],
+    description: 'Stacie prova seu valor quando a família parte para um festival de balões e ela precisa salvar o dia.',
+    order: { lancamento: 44, magico: 99, moderno: 28, multiverso: 44, teoriaFas: 44 }
+  },
+  {
+    id: 'teresaReceitaAmizade',
+    title: 'Barbie e Teresa: Receita de Amizade',
+    year: 2025,
+    duration: '60 min',
+    image: '/images/logoBarbie.png',
+    videoUrl: null,
+    category: 'Culinária',
+    genres: ["Culinária", "Receita", "Amizade"],
+    description: 'Barbie e Teresa unem sua paixão por culinária e música para abrir um estúdio gastronômico de sucesso.',
+    order: { lancamento: 45, magico: 99, moderno: 29, multiverso: 45, teoriaFas: 45 }
   }
 ];
